@@ -1,6 +1,6 @@
 # Introducción a HTML5
 
-![HTML5](HTML5_Logo_256.png)
+![HTML5](images/HTML5_Logo_256.png)
 
 Ruben Cancho (IES La Vereda 2013)
 
@@ -49,7 +49,7 @@ Por ultimo el lenguaje Javascript nos permitirá crear páginas web dinámicas, 
 
 # Como vamos a aprender?
 
-![juegos](juegos.jpg)
+![juegos](images/juegos.jpg)
 
 # Presenter notes
 
@@ -62,7 +62,7 @@ Como vamos a aprender? Pues seguiremos una metodología muy parecida a la del tr
 * Videotutoriales
 * Libro: "The essential guide to HTML5"
 
-![libro](libro.jpg)
+![libro](images/libro.jpg)
 
 # Presenter notes
 
@@ -315,7 +315,90 @@ Añadir las siguientes directivas al "body" del ejercicio 2:
 
 # Javascript
 
+* ## Lenguaje de programación
+* ## Orientado a eventos
+* ## Modificar HTML/CSS en tiempo real
+
+# Presenter notes
+
+Diferencia entre un lenguaje de programación y un lenguaje descriptivo
+Ejemplos de posibles eventos: 
+
+   de usuario -> hacer click en un elemento, escribir en un cuadro de texto, mover el raton,...
+   de programa -> al pasar un determinado tiempo, al recibir un mensaje de otro objeto,...
+
+Lista de ejemplos de posibles efectos:
+   - dar mensajes de error cuando no hemos escrito los valores adecuados en un formulario.
+   - cambiar los contenidos y estilo de los elementos de la página cuando se aprieta un botón.
+
 ---
 
-# Herramientas desarrollo web
+# Ejemplo Javascript
 
+
+* ## Consola Javascript => F12
+
+# Presenter notes
+
+    2+2
+    "hola" + "k ase"   
+    Date();
+    document
+    document.write("hola");
+    document.write(Date());
+
+Explicar el objeto document, la funcion write y la funcion Date. i
+Se usan parentesis para poner los parámetros de una funcion, si no tiene se abre y se cierra.
+Se usan puntos para indicar que es una funcion relativa a un objeto.
+Se usa el punto y coma para indicar el final de una sentencia. 
+
+Es importante seguir las reglas del lenguaje o no funcionará bien.
+
+Utilizar la consola Javascript de Google Chrome y hacerlo en tiempo real.
+
+---
+
+# Javascript y HTML
+
+    !html
+    <html>
+      ...
+      <script src="javascript.js"></script>
+      </body>
+    </html>
+
+# Presenter notes
+
+antes de cerrar el body, para que se cargue bien la página primero.
+
+---
+ 
+# Javascript y HTML
+
+    !js
+
+    // Esta funcion empieza cuando se ha cargado la página
+    function init() {
+       // AQUI PONEMOS NUESTRAS INSTRUCCIONES
+       ...
+    }
+
+    window.onload = init;
+
+# Presenter notes
+
+Hacer ejemplo. Utilizar consola de Google Chrome y probar a hacer un fallo para ver como depurar!
+
+---
+
+# Ejercicio resumen
+
+## Añadir la fecha al ejercicio2 con Javascript
+
+    !js
+    
+    function init() {
+       document.write(Date());
+    }
+
+    window.onload = init;
