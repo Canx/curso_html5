@@ -402,3 +402,35 @@ Hacer ejemplo. Utilizar consola de Google Chrome y probar a hacer un fallo para 
     }
 
     window.onload = init;
+
+---
+
+# Objeto document
+
+write -> MACHACA TODO EL DOCUMENTO :(
+
+* Solucion!
+
+    MÉTODO getElementById
+
+---
+
+# Solucion: paso 1
+
+Añadimos etiqueta con identificador:
+
+    !html
+    ...
+    <p id="fecha"></p>
+    </body>
+    </html>
+
+---
+
+# Solucion: paso 2
+
+Modificamos la etiqueta con Javascript:
+
+    !html
+    fecha = document.getElementById("fecha");
+    fecha.innerHTML = Date();
