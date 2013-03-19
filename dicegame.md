@@ -34,6 +34,23 @@ programar: crear funciones (parecido a los grupos de bloques que recibian mensaj
 
 ---
 
+# Iteracion 1
+
+* Objetivo
+
+Mostrar un botón y al pulsar escribir el resultado de la tirada.
+
+---
+
+# Botones
+
+    !html
+    <button>Tira los dados</button>
+
+# Presenter notes
+
+Hacer interfaz básica y esqueleto html
+
 # PROBLEMA: Tirar dados
 
 Valor aleatorio entre 0 y 1:
@@ -88,12 +105,15 @@ POR HACER
 
 ---
 
-# Botones, eventos y funciones
+# Eventos y funciones
 
 POR HACER
 
----
+# Presenter notes
 
+Con lo anterior crear la funcion tirada, que a su vez llamará dos veces a la funcion tirar_dado y luego llamará a la función dibujar_dados.
+
+---
 # Condicionales: if
 
    !js
