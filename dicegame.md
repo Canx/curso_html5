@@ -34,26 +34,45 @@ programar: crear funciones (parecido a los grupos de bloques que recibian mensaj
 
 ---
 
+# Metodología de desarrollo
+
+* Incremental
+    * Añadimos funcionalidad poco a poco
+    * Probamos cada cosa después de hacerla.
+    * Organizamos el código para que quede más claro
+ 
+* Iterativa
+    * Versiones sucesivas que nos acercan al objetivo.
+    * Cada version se construye sobre la anterior
+
+
+--- 
+
 # Iteracion 1
 
-* Objetivo
+* ## Objetivo
 
-Mostrar un botón y al pulsar escribir el resultado de la tirada.
+## Mostrar un botón y al pulsar escribir el resultado de la tirada.
 
 ---
 
 # Botones
+
+## Como crear un botón
 
     !html
     <button>Tira los dados</button>
 
 # Presenter notes
 
+Mostrar chuleta HTML5
 Hacer interfaz básica y esqueleto html
+
+---
 
 # PROBLEMA: Tirar dados
 
-Valor aleatorio entre 0 y 1:
+## Valor aleatorio entre 0 y 1
 
     !js
     Math.random()
@@ -62,7 +81,7 @@ Valor aleatorio entre 0 y 1:
 
 # PROBLEMA: Tirar dados
 
-Redondea n hacia abajo:
+## Redondea n hacia abajo
 
     !js
     Math.floor(n)
@@ -71,7 +90,7 @@ Redondea n hacia abajo:
 
 # PROBLEMA: Tirar dados
 
-Devuelve un valor entre 1 y 6:
+## Devuelve un valor entre 1 y 6
 
     !js
     1+Math.floor(Math.random()*6)
@@ -84,7 +103,7 @@ Devuelve un valor entre 1 y 6:
 * Se declaran usando *var*
 * Se inicializan con el operador *=*
 
-# Presenter notes:
+# Presenter notes
 
 Hacer ejemplos de asignacion de numero y texto.
 
@@ -92,28 +111,123 @@ Hacer ejemplos de asignacion de numero y texto.
 
 # Variables
 
-Almacena la tirada en la variable "tirada":
+## Almacena la tirada en la variable "tirada":
 
     !js
     var tirada = 1+Math.floor(Math.random()*6);
 
 ---
 
-# Funciones
+# Eventos
 
-POR HACER
+## *acciones* que suceden en un *objeto* y disparan una *funcion*
+
+## Ejemplo
+
+apretar un botón y que se muestre un mensaje.
+
+* accion -> pulsar (evento onlick)
+* objeto -> boton (objeto button)
+* funcion -> mostrar mensaje (funcion alert("hola"))
+
+# Presenter notes
+
+* Ejemplos de acciones
+    * apretar un botón
+    * mover el ratón sobre un elemento
+    * cargar una página
+
+---
+
+# Evento onclick
+
+    !js
+    var boton;
+    boton = document.getElementById("boton");
+    boton.onclick = alert("hola");
+
+# Presenter notes
+
+Un evento está asociado a un objeto.
+Las etiquetas son objetos.
+Todas las etiquetas que se pueden clicar tienen el evento onclick.
+Asociamos una funcion a un evento.
+
+---
+
+# Tipos de funciones
+
+* Funciones de la librería Javascript
+    * Date();
+    * alert(...);
+    * Math.random(...);
+    * Math.floor(...);
+
+* Funciones definidas por el usuario
+
+# Presenter notes
+
+Podemos crear nuestrar propias funciones!
 
 ---
 
 # Eventos y funciones
 
-POR HACER
+    !js
+    function tirar_dados() {
+
+    }    
+
+    var boton;
+    boton = document.getElementById("boton");
+    boton.onclick = tirar_dados
 
 # Presenter notes
 
-Con lo anterior crear la funcion tirada, que a su vez llamará dos veces a la funcion tirar_dado y luego llamará a la función dibujar_dados.
+tirar_dados es una funcion definida por el usuario.
+El flujo del programa se empieza cuando se aprieta el botón, no cuando se carga la ventana (window.onload)
 
 ---
+
+# Funciones
+
+* Estructurar el programa en funciones
+* Utilizar funciones que solo hagan una sola cosa
+* Poner nombres claros a las funciones
+
+
+# Presenter notes
+
+Empezar con una gran funcion y ir refactorizando.
+
+Resultado final despues de refactorizar
+
+   !js
+   function tirada() {
+       var tirada;
+       tirada = 1+Math.floor(Math.random()*6);
+       return tirada;
+   }
+
+   function imprimir_en(id, valor) {
+       var etiqueta;
+       etiqueta = document.getElementById(id);
+       etiqueta.innerHTML = valor;
+   }
+
+   function tirar_dados() {
+       imprimir_en("dado1", tirada());
+       imprimir_en("dado2", tirada());
+   }
+
+---
+
+# Iteracion 2
+
+Objetivo: Añadir la lógica del juego
+
+---
+
 # Condicionales: if
 
    !js
