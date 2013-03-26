@@ -2,13 +2,18 @@
 
 ![dados](images/dados.jpg)
 
+Vamos a crear un juego de dados en Javascript!
+
 ---
 
-# Objetivos
+# Contenidos
 
-* dibujar en el "canvas"
-* programar la lógica del juego
-* crear formularios 
+# Cosas que necesitaremos aprender para hacer el juego:
+
+   * Variables -> almacenan objetos
+   * Funciones -> contienen instrucciones
+   * Eventos -> disparan funciones
+   * Canvas -> permiten dibujar
 
 # Presenter notes
 
@@ -70,6 +75,65 @@ Hacer interfaz básica y esqueleto html
 
 ---
 
+# Eventos
+
+## *acciones* que suceden en un *objeto* y disparan una *funcion*
+
+## Ejemplo
+
+apretar un botón y que se muestre un mensaje.
+
+* accion -> pulsar 
+* objeto -> boton 
+* funcion -> mostrar mensaje
+
+# Presenter notes
+
+* Ejemplos de acciones
+    * apretar un botón
+    * mover el ratón sobre un elemento
+    * cargar una página
+
+---
+
+# Evento onclick
+
+    !js
+    function mostrar_mensaje() {
+        window.alert("hola");
+    }
+
+    var boton;
+    boton = document.getElementById("boton");
+    boton.onclick = mostrar_mensaje;
+
+# Presenter notes
+
+Un evento está asociado a un objeto.
+Las etiquetas son objetos.
+Todas las etiquetas que se pueden clicar tienen el evento onclick.
+Asociamos una funcion a un evento.
+
+---
+
+# Eventos y funciones
+
+    !js
+    function tirar_dados() {
+
+    }    
+
+    var boton;
+    boton = document.getElementById("boton");
+    boton.onclick = tirar_dados
+
+# Presenter notes
+
+tirar_dados es una funcion definida por el usuario.
+El flujo del programa se empieza cuando se aprieta el botón, no cuando se carga la ventana (window.onload)
+
+---
+
 # PROBLEMA: Tirar dados
 
 ## Valor aleatorio entre 0 y 1
@@ -95,8 +159,7 @@ Hacer interfaz básica y esqueleto html
     !js
     1+Math.floor(Math.random()*6)
 
----
-
+-
 # Variables
 
 * Guardan valores: números, texto, objetos, funciones,... 
@@ -118,52 +181,23 @@ Hacer ejemplos de asignacion de numero y texto.
 
 ---
 
-# Eventos
+# Funciones
 
-## *acciones* que suceden en un *objeto* y disparan una *funcion*
-
-## Ejemplo
-
-apretar un botón y que se muestre un mensaje.
-
-* accion -> pulsar (evento onlick)
-* objeto -> boton (objeto button)
-* funcion -> mostrar mensaje (funcion alert("hola"))
-
-# Presenter notes
-
-* Ejemplos de acciones
-    * apretar un botón
-    * mover el ratón sobre un elemento
-    * cargar una página
-
----
-
-# Evento onclick
-
-    !js
-    var boton;
-    boton = document.getElementById("boton");
-    boton.onclick = alert("hola");
-
-# Presenter notes
-
-Un evento está asociado a un objeto.
-Las etiquetas son objetos.
-Todas las etiquetas que se pueden clicar tienen el evento onclick.
-Asociamos una funcion a un evento.
+* ## Que es una funcion?
+    * *conjunto de instrucciones* que permiten resolver una tarea
+    * Se puede llamar a la funcion desde otra parte del programa
+    * pueden tener *parametros* para realizar la tarea
+    * devuelven un *resultado* que puede guardarse en una variable
 
 ---
 
 # Tipos de funciones
 
 * Funciones de la librería Javascript
-    * Date();
-    * alert(...);
-    * Math.random(...);
-    * Math.floor(...);
+    * Ejemplo: Date(), Math.random(), window.alert(msg)
 
 * Funciones definidas por el usuario
+    * function mifuncion() { ... }
 
 # Presenter notes
 
@@ -171,23 +205,6 @@ Podemos crear nuestrar propias funciones!
 
 ---
 
-# Eventos y funciones
-
-    !js
-    function tirar_dados() {
-
-    }    
-
-    var boton;
-    boton = document.getElementById("boton");
-    boton.onclick = tirar_dados
-
-# Presenter notes
-
-tirar_dados es una funcion definida por el usuario.
-El flujo del programa se empieza cuando se aprieta el botón, no cuando se carga la ventana (window.onload)
-
----
 
 # Funciones
 
