@@ -129,8 +129,8 @@ Asociamos una funcion a un evento.
 
 # Presenter notes
 
-tirar_dados es una funcion definida por el usuario.
-El flujo del programa se empieza cuando se aprieta el botón, no cuando se carga la ventana (window.onload)
+    tirar_dados es una funcion definida por el usuario.
+    El flujo del programa se empieza cuando se aprieta el botón, no cuando se carga la ventana (window.onload)
 
 ---
 
@@ -159,7 +159,8 @@ El flujo del programa se empieza cuando se aprieta el botón, no cuando se carga
     !js
     1+Math.floor(Math.random()*6)
 
--
+---
+
 # Variables
 
 * Guardan valores: números, texto, objetos, funciones,... 
@@ -168,7 +169,7 @@ El flujo del programa se empieza cuando se aprieta el botón, no cuando se carga
 
 # Presenter notes
 
-Hacer ejemplos de asignacion de numero y texto.
+    Hacer ejemplos de asignacion de numero y texto.
 
 ----
 
@@ -183,13 +184,49 @@ Hacer ejemplos de asignacion de numero y texto.
 
 # Funciones
 
-* ## Que es una funcion?
+* Que es una funcion?
     * *conjunto de instrucciones* que permiten resolver una tarea
     * Se puede llamar a la funcion desde otra parte del programa
-    * pueden tener *parametros* para realizar la tarea
-    * devuelven un *resultado* que puede guardarse en una variable
 
 ---
+
+# Funciones
+
+* ## Para que sirven?
+    * No "reinventar la rueda"
+    * No repetir código
+    * Más claridad y sencillez
+    * Programas más fáciles de modificar
+
+---
+
+# Definicion de una funcion
+
+    !js
+    function nombreFuncion(parametro1, parametro2, ...) {
+       var resultado; // variables locales
+
+       ...
+       return resultado; // retornar resultado
+    }
+
+#Presenter notes
+
+    pueden tener parametros para realizar la tarea
+    devuelven un resultado que puede guardarse en una variable
+    podemos usar funciones dentro de funciones.
+
+---
+
+# Uso de una funcion
+
+    !js
+    var resultado;
+
+    resultado = nombreFuncion(p1, p2);
+
+---
+
 
 # Tipos de funciones
 
@@ -201,17 +238,29 @@ Hacer ejemplos de asignacion de numero y texto.
 
 # Presenter notes
 
-Podemos crear nuestrar propias funciones!
+    Podemos crear nuestrar propias funciones!
 
 ---
 
+# Consejos prácticos sobre funciones
 
-# Funciones
-
-* Estructurar el programa en funciones
-* Utilizar funciones que solo hagan una sola cosa
+* Utilizarlas cuando repitas código
+* Crear funciones que solo hagan una sola cosa
 * Poner nombres claros a las funciones
 
+---
+
+# Práctica
+
+* Tirar dos dados
+* Imprimir el resultado en etiquetas
+    * RECUERDA: getElementById()
+
+---
+
+# Práctica
+
+* Reorganizar el código en funciones
 
 # Presenter notes
 
@@ -219,7 +268,7 @@ Empezar con una gran funcion y ir refactorizando.
 
 Resultado final despues de refactorizar
 
-   !js
+<pre>
    function tirada() {
        var tirada;
        tirada = 1+Math.floor(Math.random()*6);
@@ -236,12 +285,58 @@ Resultado final despues de refactorizar
        imprimir_en("dado1", tirada());
        imprimir_en("dado2", tirada());
    }
+</pre>
 
 ---
 
 # Iteracion 2
 
-Objetivo: Añadir la lógica del juego
+Objetivo: Hacer el diseño más "cool"
+
+---
+
+# Fondo
+
+* background
+* background-size
+
+---
+
+# Números como dados
+
+* Fuente dice.ttf
+* @font-face
+
+---
+
+# Recuadro de juego
+
+* width
+* height
+* background-color
+
+---
+
+# Borde del recuadro
+
+* border
+* border-radius
+
+---
+
+# Botón más moderno
+
+* [css3button.net](http://css3button.net/)
+
+---
+
+# POR HACER
+
+---
+
+# Iteracion 3
+
+Objetivo: hacer la lógica del juego
 
 ---
 
