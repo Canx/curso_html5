@@ -291,36 +291,79 @@ Resultado final despues de refactorizar
 
 # Iteracion 2
 
-Objetivo: Hacer el diseño más "cool"
+* # Objetivo: Hacer el diseño más "cool"
+* # Herramienta: CSS
 
 ---
 
-# Fondo
+# Cambiar el fondo
 
-* background
-* background-size
+* DIRECTIVAS CSS
+    * background
+    * background-color
+    * background-image
+    * background-size
+    * background-repeat
+
+
+# Presenter notes
+
+Página web donde consultar como funcionan... TODO
 
 ---
 
-# Números como dados
+# Fuentes tipo dados
 
-* Fuente dice.ttf
-* @font-face
+* CSS
+    * @font-face
+    * font-family
+    * font-size
+
+# Presenter notes
+
+Fuente que tiene caras de dados en vez de números
+@font-face: Como utilizar una fuente en un archivo CSS
+Como utilizar una fuente en una regla CSS
+
+---
+
+# Ejemplo fuentes
+
+    !css
+    @font-face {
+        font-family: "Dice";
+        src: url(dice.ttf) format("truetype");
+    }
+
+    p {
+        font-family: "Dice";
+        font-size: 40px;
+    }
 
 ---
 
 # Recuadro de juego
 
-* width
-* height
-* background-color
+* DIRECTIVAS CSS
+    * width: <pixeles>px | <porcentaje>% 
+    * height: <pixeles>px | <porcentaje>%
+    * min-width:  <pixeles>px | <porcentaje>%
+    * min-height: <pixeles>px | <porcentaje>%
+
+* Ejemplo
+    !css
+    h1 {
+        width: 200px;
+        height: 50px;
+    }
 
 ---
 
 # Borde del recuadro
 
-* border
-* border-radius
+* DIRECTIVAS CSS
+    * border
+    * border-radius
 
 ---
 
