@@ -296,19 +296,66 @@ Resultado final despues de refactorizar
 
 ---
 
+# Cheatsheet CSS
+
+# http://overapi.com/css/
+
+---
+
+# Cambiar el fondo
+
+* IMÁGENES EN GOOGLE:
+
+    * "Free Stock Photos"
+
+---
+
 # Cambiar el fondo
 
 * DIRECTIVAS CSS
-    * background
-    * background-color
     * background-image
-    * background-size
     * background-repeat
+    * background-position
+    * background-attachment
+    * background-size
 
+---
+
+# Cambiar el fondo
+    !css
+    html {
+       background-image: url(images/dices.jpg);
+       background-repeat: no-repeat;
+       background-position: center center;
+       background-attachment: fixed;
+       background-size: cover;
+    }
 
 # Presenter notes
 
-Página web donde consultar como funcionan... TODO
+Ir explicando cada directiva una por una, viendo las opciones en el cheatsheet y haciendo el ejemplo a continuación.
+
+---   
+
+# Cambiar el fondo
+
+    !css
+    html {
+       background: url(images/dices.jpg) no-repeat center center fixed cover;
+    }
+
+# Presenter notes
+
+Como agrupar todas las directivas.
+
+---
+
+# Actividad
+
+1. Busca una imagen de fondo para el juego.
+2. Aplica directivas "background"
+    * las mismas ó
+    * Experimenta tú mismo
 
 ---
 

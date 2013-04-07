@@ -1,20 +1,20 @@
 html {
     background: url(images/dices.jpg) no-repeat center center fixed;
-	background-size: cover;  
+	  background-size: cover;  
 }
 
 h1 {
-	text-align: center;
+	  text-align: center;
 }
 
 @font-face {
-	font-family: "Dice";
-	src: url(dice.ttf) format("truetype");
+	  font-family: "Dice";
+	  src: url(dice.ttf) format("truetype");
 }
 
 .dado {
-	font-family: "Dice", sans-serif;
-	font-size: 40pt;
+	  font-family: "Dice", sans-serif;
+	  font-size: 40pt;
 }
 
 #juego {
