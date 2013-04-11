@@ -392,12 +392,19 @@ Como utilizar una fuente en una regla CSS
 # Recuadro de juego
 
 * DIRECTIVAS CSS
-    * width: <pixeles>px | <porcentaje>% 
-    * height: <pixeles>px | <porcentaje>%
-    * min-width:  <pixeles>px | <porcentaje>%
-    * min-height: <pixeles>px | <porcentaje>%
+    * width
+    * height
+    * min-width
+    * min-height
 
-* Ejemplo
+# Presenter notes
+
+se puede aplicar a cualquier etiqueta
+unidades en px, %, em
+
+---
+
+# Ejemplo
     !css
     h1 {
         width: 200px;
@@ -409,8 +416,29 @@ Como utilizar una fuente en una regla CSS
 # Borde del recuadro
 
 * DIRECTIVAS CSS
-    * border
+    * border-color
+    * border-style
+    * border-width
+    * border-image
     * border-radius
+    * box-shadow
+
+---
+
+# Ejemplo
+
+div {
+    border-color: Black;
+    border-style: solid;
+    border-width: thick;
+    border-image: ...
+
+}
+
+# Presenter notes
+
+selector de color
+http://www.quackit.com/css/css_color_codes.cfm
 
 ---
 
