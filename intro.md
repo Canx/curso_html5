@@ -2,6 +2,12 @@
 
 ![HTML5](images/HTML5_Logo_256.png)
 
+[![CC][1]][2]
+
+[1]: images/cc.png
+[2]: http://creativecommons.org/licenses/by-sa/3.0/
+
+
 Ruben Cancho (IES La Vereda 2013)
 
 # Presenter notes

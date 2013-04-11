@@ -13,3 +13,21 @@ task :default => ["dist"] do
   end
   puts "--- todas las presentaciones generadas!"
 end
+
+task :local => [:default] do
+  puts "--- subiendo presentaciones al servidor local"
+  sh "cp dist/* /srv/www/htdocs/html5/"
+  puts "--- presentaciones subidas!"
+end
+
+task :upload => [:default] do
+  puts "---subiendo presentaciones..."
+  sh "scp dist/* rcancho@10.0.1.254:/home/grups/informatica/informatica4eso/HTML5/"
+  puts "--- presentaciones subidas!"
+end
+
+task :dropbox => [:default] do
+  puts "--- subiendo presentaciones a dropbox..."
+  sh "cd ~/Desarrollo/curso_html5/dist; drop *"
+  puts "-- presentaciones subidas!"
+end

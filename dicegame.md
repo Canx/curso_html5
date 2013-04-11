@@ -2,8 +2,12 @@
 
 ![dados](images/dados.jpg)
 
-Vamos a crear un juego de dados en Javascript!
+[![CC][1]][2]
 
+[1]: images/cc.png
+[2]: http://creativecommons.org/licenses/by-sa/3.0/
+
+Ruben Cancho (2013 IES La Vereda)
 ---
 
 # Contenidos
@@ -419,21 +423,19 @@ unidades en px, %, em
     * border-color
     * border-style
     * border-width
-    * border-image
     * border-radius
-    * box-shadow
 
 ---
 
 # Ejemplo
 
-div {
-    border-color: Black;
-    border-style: solid;
-    border-width: thick;
-    border-image: ...
-
-}
+    !css
+    div {
+        border-color: Black;
+        border-style: solid;
+        border-width: thick;
+        border-radius: 10px;
+    }
 
 # Presenter notes
 
@@ -441,6 +443,17 @@ selector de color
 http://www.quackit.com/css/css_color_codes.cfm
 
 ---
+
+# Fondo semitransparente
+
+* DIRECTIVA CSS:
+    * background-color: rgba(R,G,B,A);
+
+---
+
+# Ejemplo
+
+
 
 # Botón más moderno
 
