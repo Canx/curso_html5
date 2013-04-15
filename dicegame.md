@@ -292,7 +292,11 @@ Resultado final despues de refactorizar
 # Iteracion 2
 
 * # Objetivo: Hacer el diseño más "cool"
-* # Herramienta: CSS
+    * Cambiar el fondo
+    * Cambiar las fuentes
+    * Añadir recuadro
+    * Estilo del botón
+    * ...
 
 ---
 
@@ -359,7 +363,7 @@ Como agrupar todas las directivas.
 
 ---
 
-# Fuentes tipo dados
+# Fuentes
 
 * CSS
     * @font-face
@@ -386,6 +390,17 @@ Como utilizar una fuente en una regla CSS
         font-family: "Dice";
         font-size: 40px;
     }
+
+# Presenter notes
+
+explicar parámetros directivas, hacer paso a paso
+
+---
+
+# Actividad
+
+1. Aplica el estilo de dados 
+2. Cambia la fuente del título h1
 
 ---
 
