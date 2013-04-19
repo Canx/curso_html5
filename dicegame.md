@@ -8,6 +8,7 @@
 [2]: http://creativecommons.org/licenses/by-sa/3.0/
 
 Ruben Cancho (2013 IES La Vereda)
+
 ---
 
 # Contenidos
@@ -367,47 +368,6 @@ Como agrupar todas las directivas.
 
 ---
 
-# Fuentes
-
-* CSS
-    * @font-face
-    * font-family
-    * font-size
-
-# Presenter notes
-
-Fuente que tiene caras de dados en vez de números
-@font-face: Como utilizar una fuente en un archivo CSS
-Como utilizar una fuente en una regla CSS
-
----
-
-# Ejemplo fuentes
-
-    !css
-    @font-face {
-        font-family: "Dice";
-        src: url(dice.ttf) format("truetype");
-    }
-
-    p {
-        font-family: "Dice";
-        font-size: 40px;
-    }
-
-# Presenter notes
-
-explicar parámetros directivas, hacer paso a paso
-
----
-
-# Actividad
-
-1. Aplica el estilo de dados 
-2. Cambia la fuente del título h1
-
----
-
 # Recuadro de juego
 
 * DIRECTIVAS CSS
@@ -423,11 +383,26 @@ unidades en px, %, em
 
 ---
 
+# Etiqueta div
+
+* DIV
+    * No da estilo
+    * Sirve como Bloque de contenido
+    * Finaliza con una nueva linea
+
+# Presenter notes
+
+Div se suele usar para cuadros de contenido. No da estilo.
+
+---
+
 # Ejemplo
     !css
-    h1 {
-        width: 200px;
-        height: 50px;
+    div {
+        width: 50%;
+        height: 50%;
+        min-width: 200px;
+        min-height: 200px;
     }
 
 ---
@@ -463,6 +438,81 @@ http://www.quackit.com/css/css_color_codes.cfm
 
 * DIRECTIVA CSS:
     * background-color: rgba(R,G,B,A);
+
+---
+
+
+# Fuentes
+
+* Familias
+    * Serif
+    * Sans-Serif
+    * Monospace
+    * Cursive
+
+# Presenter notes
+
+Ver algunos tipos de fuentes y como ver las disponibles en el navegador.
+Disponibilidad de fuentes: depende del navegador. 
+
+---
+
+# Fuentes
+
+* CSS
+    * @font-face -> definir nuevas fuentes
+    * font-family -> familia o fuente de una regla
+    * font-size -> tamaño de la fuente
+
+# Presenter notes
+
+Fuente que tiene caras de dados en vez de números
+@font-face: Como utilizar una fuente en un archivo CSS
+Como utilizar una fuente en una regla CSS
+
+---
+
+# Ejemplos fuentes "seguras"
+
+    !css
+    h1 {
+        font-family: Arial, sans-serif;
+    }
+
+---
+
+# Ejemplo fuentes importadas
+
+    !css
+    @font-face {
+        font-family: "Dice";
+        src: url(dice.ttf) format("truetype");
+    }
+
+    .dado {
+        font-family: "Dice";
+        font-size: 40px;
+    }
+
+---
+
+# Tipos de archivos de fuentes
+
+* Truetype (.ttf)
+* Embedded OpenType (.eot)
+* Web Open Font Format (.woff)
+
+# Presenter notes
+
+explicar parámetros directivas, hacer paso a paso
+Descargarse fuentes de google fonts
+
+---
+
+# Actividad
+
+1. Aplica el estilo de dados 
+2. Cambia la fuente del título h1
 
 ---
 
