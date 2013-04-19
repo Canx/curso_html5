@@ -439,6 +439,12 @@ http://www.quackit.com/css/css_color_codes.cfm
 * DIRECTIVA CSS:
     * background-color: rgba(R,G,B,A);
 
+* RGBA:
+    * R -> RED (ROJO)
+    * G -> GREEN (VERDE)
+    * B -> BLUE (AZUL)
+    * A -> ALFA (TRANSPARENCIA)
+
 ---
 
 
@@ -536,24 +542,29 @@ Objetivo: hacer la lógica del juego
 
 ---
 
-# Condicionales: if
+# Operadores de comparación
 
-   !js
-   if (condicion) {
+* Devuelven siempre true o false
+    * x > y  (x mayor que y?)
+    * x < y  (x menor que y?)
+    * x >= y (x mayor o igual que y?)
+    * x <= y (x menor o igual que y?)
+    * x == y (x igual a y?)
 
-   } 
+# Presenter notes
+
+que pueden ser x e y (variables, expresiones, constantes)
+realizar ejemplos con la consola
+devuelven verdadero o falso
 
 ---
 
 # Condicionales: if
 
-    !js
-    if (condicion) {
-
-    }
-    else {
-
-    }
+   !js
+   if (condicion) {
+      // condicion verdadera
+   } 
 
 ---
 
@@ -562,19 +573,203 @@ Objetivo: hacer la lógica del juego
 Ejemplos:
 
     !js
-    if (edad > 18) {
-        alert("Eres mayor de edad!");
+    var tirada;
+
+    tirada = 7;
+    if (tirada == 7) {
+        console.log("HAS GANADO!");
+    }
+
+# Presenter notes
+
+hacer caso de ganar cuando se saca un 7
+ 
+---
+
+# Operadores booleanos
+
+* Devuelven true o false
+
+    * a && b -> a es verdad *Y* b es verdad?
+    * x || y  -> a es verdad *O* b es verdad?
+    * !x      -> a *NO* es verdad?
+
+#Presenter notes
+
+necesitamos saber cuando una tirada es igual a 7 O es igual a 11! Hacer ejemplo
+
+---
+
+# Operadores booleanos: ejemplo
+
+    !js
+    var tirada;
+
+    tirada = 11;
+    if ((tirada == 11) || (tirada == 7)) {
+        console.log("HAS GANADO!");
+    }
+
+---
+
+# Mostrar mensajes 
+
+* Como mostramos los mensajes?
+    * innerHTML
+
+
+# Presenter notes
+
+usar un div con id="mensaje".
+usar imprime_en("mensaje", "HAS GANADO!");
+añadir estilo CSS 
+
+---
+
+# Condicionales: if else
+
+    !js
+    if (condicion) {
+        // condicion verdadera
     }
     else {
-        alert("Aun eres menor de edad.");
+        // condicion falsa
     }
-   
+ 
+---
+
+# Condicionales: if else
+
+    !js
+    var tirada;
+
+    tirada = 7;
+    if ((tirada == 7) || (tirada == 11)) {
+        console.log("HAS GANADO!");
+    }
+    else {
+        console.log("HAS PERDIDO!");
+    }
+
+---
+
+# Condicionales: if else if 
+
+   !js
+    if (condicion1) {
+        // condicion1 verdadera
+    }
+    else if (condicion2) {
+        // condicion2 verdadera 
+    } 
+    else {
+       // condicion1 y condicion2 falsas
+    }
+ 
+---
+
+# Condicionales: if else if (ejemplo)
+
+   !js
+   var tirada;
+
+   tirada = 7;
+   if ((tirada == 7) || (tirada == 11)) {
+       console.log("HAS GANADO!");
+   }
+   else if ((tirada == 2) || (tirada == 3) || (tirada == 12)) {
+       console.log("HAS PERDIDO!");
+   }
+   else {
+       console.log("CONTINUA JUGANDO!");
+   }
+
+---
+
+# Que nos queda por hacer?
+
+* Como saber si es la primera tirada?
+* Como guardar la tirada anterior?
+* Como mostrar los dados antiguos?
+* Como mostrar mensajes?
+
+---
+
+# Como saber si es la primera tirada
+
+    !js
+    var es_primera_tirada;
+
+    es_primera_tirada = true;
+    if (es_primera_tirada) {
+        // ENTRA AQUI
+    }
+    else {
+        // NO ENTRA AQUI
+    }
+
+# Presenter notes
+
+Modificar juego para que solo haga la logica en el primer caso.
+Donde declarar es_primera_tirada? Variable global
+Donde modificar es_primera_tirada? En tirar_dados()
+
+---
+
+# Como guardar tirada anterior
+
+    !js
+    var tirada_anterior
+
+    if (es_primera_tirada) {
+    ...
+    }
+    else {
+       if (tirada == tirada_anterior) {
+          console.log("HAS GANADO!");   
+       }   
+    // antes de acabar una tirada 
+    tirada_anterior = tirada
+    }
+
 ---
 
 # Condicionales: switch
 
-POR HACER
+    !js
+    switch (expression) {
+        case valor1: // sentencias caso 1
+            break;
+        case valor2: // sentencias caso 2
+            break;
+        ...
+        default: // sentencias resto de casos
+    }
 
+---
+
+# Condicionales: switch (ejemplo)
+
+    !js
+    switch (tirada) {
+        case 7: 
+        case 11: 
+            console.log("HAS GANADO!");
+            break;
+        case 2:
+        case 3:
+        case 12: 
+            console.log("HAS PERDIDO!");
+            break;
+        default:
+            console.log("CONTINUAS JUGANDO!");
+    }    
+
+
+
+# Presenter notes
+
+Hacer caso de perder: 2, 3 o 12
 ---
 
 # Canvas

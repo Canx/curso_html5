@@ -14,6 +14,12 @@ task :default => ["dist"] do
   puts "--- todas las presentaciones generadas!"
 end
 
+task :code do
+  puts "--- subiendo codigo al servidor local"
+  sh "cp -r code/ /srv/www/htdocs/html5/"
+  puts "--- codigo subido!"
+end
+
 task :local => [:default] do
   puts "--- subiendo presentaciones al servidor local"
   sh "cp dist/* /srv/www/htdocs/html5/"
