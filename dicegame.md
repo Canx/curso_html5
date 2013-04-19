@@ -498,20 +498,8 @@ devuelven verdadero o falso
 
    !js
    if (condicion) {
-
+      // condicion verdadera
    } 
-
----
-
-# Condicionales: if
-
-    !js
-    if (condicion) {
-
-    }
-    else {
-
-    }
 
 ---
 
@@ -520,22 +508,158 @@ devuelven verdadero o falso
 Ejemplos:
 
     !js
-    var edad;
+    var tirada;
 
-    edad = 16;
-    if (edad > 18) {
-        alert("Eres mayor de edad!");
+    tirada = 7;
+    if (tirada == 7) {
+        console.log("HAS GANADO!");
+    }
+
+# Presenter notes
+
+hacer caso de ganar cuando se saca un 7
+ 
+---
+
+# Operadores booleanos
+
+* Devuelven true o false
+
+    * a && b -> a es verdad *Y* b es verdad?
+    * x || y  -> a es verdad *O* b es verdad?
+    * !x      -> a *NO* es verdad?
+
+#Presenter notes
+
+necesitamos saber cuando una tirada es igual a 7 O es igual a 11! Hacer ejemplo
+
+---
+
+# Operadores booleanos: ejemplo
+
+    !js
+    var tirada;
+
+    tirada = 11;
+    if ((tirada == 11) || (tirada == 7)) {
+        console.log("HAS GANADO!");
+    }
+
+---
+
+# Mostrar mensajes 
+
+* Como mostramos los mensajes?
+
+# Presenter notes
+
+usar un div con id="mensaje".
+usar imprime_en("mensaje", "HAS GANADO!");
+
+---
+
+# Condicionales: if else
+
+    !js
+    if (condicion) {
+        // condicion verdadera
     }
     else {
-        alert("Aun eres menor de edad.");
+        // condicion falsa
     }
-   
+ 
 ---
+
+# Condicionales: if else
+
+    !js
+    var tirada;
+
+    tirada = 7;
+    if ((tirada == 7) || (tirada == 11)) {
+        console.log("HAS GANADO!");
+    }
+    else {
+        console.log("HAS PERDIDO!");
+    }
+
+---
+
+# Condicionales: if else if 
+
+   !js
+    if (condicion1) {
+        // condicion1 verdadera
+    }
+    else if (condicion2) {
+        // condicion2 verdadera 
+    } 
+    else {
+       // condicion1 y condicion2 falsas
+    }
+ 
+---
+
+# Condicionales: if else if (ejemplo)
+
+   !js
+   var tirada;
+
+   tirada = 7;
+   if ((tirada == 7) || (tirada == 11)) {
+       console.log("HAS GANADO!");
+   }
+   else if ((tirada == 2) || (tirada == 3) || (tirada == 12)) {
+       console.log("HAS PERDIDO!");
+   }
+   else {
+       console.log("CONTINUA JUGANDO!");
+   }
+
+---
+
+# Guardar tirada anterior
+
+* Como guardar la tirada?
+* Como mostrar los dados antiguos?
+* Como mostrar mensajes?
 
 # Condicionales: switch
 
-POR HACER
+    !js
+    switch (expression) {
+        case valor1: // sentencias caso 1
+            break;
+        case valor2: // sentencias caso 2
+            break;
+        ...
+        default: // sentencias resto de casos
+    }
 
+---
+
+# Condicionales: switch (ejemplo)
+
+    !js
+    switch (tirada) {
+        case 7: 
+        case 11: 
+            console.log("HAS GANADO!");
+            break;
+        case 2:
+        case 3:
+        case 12: 
+            console.log("HAS PERDIDO!");
+            break;
+        default:
+            console.log("CONTINUAS JUGANDO!");
+    }    
+
+
+
+# Presenter notes
+
+Hacer caso de perder: 2, 3 o 12
 ---
 
 # Canvas
