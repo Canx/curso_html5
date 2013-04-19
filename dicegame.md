@@ -449,6 +449,12 @@ http://www.quackit.com/css/css_color_codes.cfm
 * DIRECTIVA CSS:
     * background-color: rgba(R,G,B,A);
 
+* RGBA:
+    * R -> RED (ROJO)
+    * G -> GREEN (VERDE)
+    * B -> BLUE (AZUL)
+    * A -> ALFA (TRANSPARENCIA)
+
 ---
 
 # Ejemplo
@@ -468,6 +474,23 @@ http://www.quackit.com/css/css_color_codes.cfm
 # Iteracion 3
 
 Objetivo: hacer la lógica del juego
+
+---
+
+# Operadores de comparación
+
+* Devuelven siempre true o false
+    * x > y  (x mayor que y?)
+    * x < y  (x menor que y?)
+    * x >= y (x mayor o igual que y?)
+    * x <= y (x menor o igual que y?)
+    * x == y (x igual a y?)
+
+# Presenter notes
+
+que pueden ser x e y (variables, expresiones, constantes)
+realizar ejemplos con la consola
+devuelven verdadero o falso
 
 ---
 
@@ -497,6 +520,9 @@ Objetivo: hacer la lógica del juego
 Ejemplos:
 
     !js
+    var edad;
+
+    edad = 16;
     if (edad > 18) {
         alert("Eres mayor de edad!");
     }
