@@ -550,11 +550,14 @@ necesitamos saber cuando una tirada es igual a 7 O es igual a 11! Hacer ejemplo
 # Mostrar mensajes 
 
 * Como mostramos los mensajes?
+    * innerHTML
+
 
 # Presenter notes
 
 usar un div con id="mensaje".
 usar imprime_en("mensaje", "HAS GANADO!");
+añadir estilo CSS 
 
 ---
 
@@ -618,11 +621,53 @@ usar imprime_en("mensaje", "HAS GANADO!");
 
 ---
 
-# Guardar tirada anterior
+# Que nos queda por hacer?
 
-* Como guardar la tirada?
+* Como saber si es la primera tirada?
+* Como guardar la tirada anterior?
 * Como mostrar los dados antiguos?
 * Como mostrar mensajes?
+
+---
+
+# Como saber si es la primera tirada
+
+    !js
+    var es_primera_tirada;
+
+    es_primera_tirada = true;
+    if (es_primera_tirada) {
+        // ENTRA AQUI
+    }
+    else {
+        // NO ENTRA AQUI
+    }
+
+# Presenter notes
+
+Modificar juego para que solo haga la logica en el primer caso.
+Donde declarar es_primera_tirada? Variable global
+Donde modificar es_primera_tirada? En tirar_dados()
+
+---
+
+# Como guardar tirada anterior
+
+    !js
+    var tirada_anterior
+
+    if (es_primera_tirada) {
+    ...
+    }
+    else {
+       if (tirada == tirada_anterior) {
+          console.log("HAS GANADO!");   
+       }   
+    // antes de acabar una tirada 
+    tirada_anterior = tirada
+    }
+
+---
 
 # Condicionales: switch
 
