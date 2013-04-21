@@ -1,35 +1,70 @@
+@font-face {
+    font-family: "dice";
+    src: url(dice.ttf) format("truetype");
+}
+
 html {
-    background: url(images/dices.jpg) no-repeat center center fixed;
-	  background-size: cover;  
+	background-image: url(dices.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 h1 {
-	  text-align: center;
-}
-
-@font-face {
-	  font-family: "Dice";
-	  src: url(dice.ttf) format("truetype");
+   font-family: 'Special Elite', cursive;
 }
 
 .dado {
-	  font-family: "Dice", sans-serif;
-	  font-size: 40pt;
+	font-family: dice, sans-serif;
+	font-size: 50px;
 }
 
 #juego {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 50%;
-    min-width: 200px;
-    min-width: 200px;
-    background-color: rgba(255,255,255,0.7);
-    border: 10px solid black;
-    margin-top: 80px;
+  	width: 50%;
+	height: 50%;
+	min-width: 200px;
+	min-height: 200px;
+	border-color: Black;
+	border-style: solid;
+	border-width: thick;
+  	text-align: center;
+  	background-color: rgba(255,255,255,0.5);
+  	border-radius: 25px;
+  	padding: 20px;
+  	margin: 0 auto;
+}
 
-    padding: 30px;
-    position: relative;
-    border-radius: 20px;
-    text-align: center;
+#boton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fa665a), color-stop(1, #d34639) );
+	background:-moz-linear-gradient( center top, #fa665a 5%, #d34639 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa665a', endColorstr='#d34639');
+	background-color:#fa665a;
+	-moz-border-radius:13px;
+	-webkit-border-radius:13px;
+	border-radius:13px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Comic Sans MS;
+	font-size:26px;
+	font-weight:bold;
+	padding:8px 49px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #98231a;
+}
+
+#boton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d34639), color-stop(1, #fa665a) );
+	background:-moz-linear-gradient( center top, #d34639 5%, #fa665a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d34639', endColorstr='#fa665a');
+	background-color:#d34639;
+}
+
+#boton:active {
+	position:relative;
+	top:1px;
 }
