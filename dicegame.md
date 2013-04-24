@@ -532,13 +532,18 @@ Descargarse fuentes de google fonts
 
 ---
 
-# POR HACER
-
----
-
 # Iteracion 3
 
 Objetivo: hacer la lógica del juego
+
+* Primer paso: GANAR SI SALE UN 7
+
+* Pasos:
+    * sumar los dados
+    * si la suma es 7 entonces
+       * mostrar el mensaje "HAS GANADO"
+    * si no
+       * continuar tirando
 
 ---
 
@@ -561,16 +566,14 @@ devuelven verdadero o falso
 
 # Condicionales: if
 
-   !js
-   if (condicion) {
-      // condicion verdadera
-   } 
+    !js
+    if (condicion) {
+       // condicion verdadera
+    } 
 
 ---
 
-# Condicionales: if
-
-Ejemplos:
+# Condicionales: if (ejemplo)
 
     !js
     var tirada;
