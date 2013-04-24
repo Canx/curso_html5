@@ -722,17 +722,52 @@ Donde modificar es_primera_tirada? En tirar_dados()
 # Como guardar tirada anterior
 
     !js
-    var tirada_anterior
+    var tirada_anterior;
 
-    if (es_primera_tirada) {
+    if (turno == 1) {
+       // es el primer turno
     ...
     }
     else {
+       // no es el primer turno
+
        if (tirada == tirada_anterior) {
           console.log("HAS GANADO!");   
        }   
-    // antes de acabar una tirada 
-    tirada_anterior = tirada
+
+       tirada_anterior = tirada;
+    }
+
+---
+
+# Variables locales vs globales
+
+   * GLOBAL -> Permanece mientra la página está abierta
+
+   * LOCAL -> Desaparece cuando acaba la llamada a la funcion donde se declara
+
+---
+
+# Variables locales
+
+    !js
+    function tirar_dados() {
+        var tirada = 0;
+
+        tirada = tirada + 1;
+    }
+
+---
+
+# Variables globales
+
+    !js
+    var tirada = 1;
+
+    function tirar_dados() {
+        // tirar dados
+        ....
+        tirada = tirada + 1;
     }
 
 ---
